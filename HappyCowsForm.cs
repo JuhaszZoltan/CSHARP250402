@@ -29,13 +29,9 @@ namespace CSHARP250402
 
             if (tej == 0) msgStr = "Nem volt fejés.";
             else if (tej < trbTej.Minimum)
-            {
                 msgStr = "Az adott napon a mennyiség nem érte el a limitet!";
-            }
-            else
-            {
+            else 
                 msgStr = $"Az adott napon a mennyiség {tej} liter volt.";
-            }
 
             if (trbTej.Minimum <= tej && tej <= trbTej.Maximum)
                 trbTej.Value = tej;
@@ -45,7 +41,6 @@ namespace CSHARP250402
                 text: msgStr,
                 buttons: MessageBoxButtons.OK,
                 icon: MessageBoxIcon.Information);
-
         }
 
         private void BtnKilepesClick(object? sender, EventArgs e)
